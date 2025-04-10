@@ -1,0 +1,179 @@
+:root {
+    --magic-purple: #6a1b9a;
+    --spell-green: #00b894;
+    --cauldron-orange: #ff7675;
+    --wizard-blue: #74b9ff;
+  }
+  
+  body {
+    font-family: 'Gochi Hand', cursive;
+    background: radial-gradient(circle at top, #2c3e50, #000000);
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .magic-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .magic-header h1 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 3.5rem;
+    color: #ffeaa7;
+    text-shadow: 3px 3px 0 var(--magic-purple);
+    margin: 0;
+  }
+  
+  .spellbook-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .quill-container {
+    position: relative;
+    margin: 1rem 0;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 200px;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    background: #2d3436;
+    border: 3px solid var(--magic-purple);
+    border-radius: 15px;
+    color: #fff;
+    font-family: 'Gochi Hand', cursive;
+    resize: none;
+    transition: all 0.3s ease;
+  }
+  
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 20px var(--magic-purple);
+    transform: scale(1.02);
+  }
+  
+  .wizard-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .spell-button {
+    background: var(--spell-green);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  .spell-button:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 15px var(--spell-green);
+  }
+  
+  .magic-metrics {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cauldron-metric {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.5rem;
+  }
+  
+  .word-ingredients {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .ingredient-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .ingredient-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .cauldron-bubble {
+    width: 80px;
+    height: 80px;
+    background: var(--cauldron-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 1rem auto;
+    animation: bubble 1.5s infinite;
+  }
+  
+  @keyframes bubble {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  .magic-guidance {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 15px;
+    color: #2d3436;
+    max-width: 300px;
+    display: none;
+  }
+  
+  .ingredient-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quill-decoration {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    background: url('data:image/svg+xml;utf8,<svg ... />'); /* Feather quill SVG */
+    opacity: 0.3;
+  }
+  
+  .magic-sparkles {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    opacity: 0.1;
+    animation: sparkle 2s infinite;
+  }

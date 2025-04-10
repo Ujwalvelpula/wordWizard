@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Wizard Workshop ✨</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/compromise"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="magic-header">
+      <h1>🪄 Word Wizard Workshop</h1>
+      <div class="magic-sparkles"></div>
+    </header>
+
+    <section class="spellbook-section">
+      <div class="quill-container">
+        <textarea id="text-input" placeholder="Write your magical spell here..."></textarea>
+        <div class="quill-decoration"></div>
+      </div>
+      
+      <div class="wizard-controls">
+        <button class="spell-button" onclick="analyzeText()">Cast Analysis Spell! ⚡</button>
+        <button class="spell-button" onclick="showExamples()">Need Help? 🧙</button>
+      </div>
+    </section>
+
+    <section class="magic-metrics">
+      <div class="cauldron-metric">
+        <div class="bubbling-counter">
+          <span class="metric-label">Words Brewing</span>
+          <div class="cauldron-bubble" id="word-count">0</div>
+        </div>
+        <div class="bubbling-counter">
+          <span class="metric-label">Character Sparks</span>
+          <div class="cauldron-bubble" id="char-count">0</div>
+        </div>
+      </div>
+
+      <div class="word-ingredients">
+        <div class="ingredient-card" data-pos="noun">
+          <div class="ingredient-icon">🏰</div>
+          <h3>Noun Stones</h3>
+          <div class="ingredient-count" id="nouns">0</div>
+        </div>
+        <div class="ingredient-card" data-pos="verb">
+          <div class="ingredient-icon">🔥</div>
+          <h3>Verb Flames</h3>
+          <div class="ingredient-count" id="verbs">0</div>
+        </div>
+        <div class="ingredient-card" data-pos="adjective">
+          <div class="ingredient-icon">🌿</div>
+          <h3>Adjective Herbs</h3>
+          <div class="ingredient-count" id="adjectives">0</div>
+        </div>
+        <div class="ingredient-card" data-pos="adverb">
+          <div class="ingredient-icon">💫</div>
+          <h3>Adverb Dust</h3>
+          <div class="ingredient-count" id="adverbs">0</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="magic-guidance" id="examples-box"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
